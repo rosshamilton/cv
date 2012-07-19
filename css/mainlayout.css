@@ -1,0 +1,235 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#headerwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+  
+}
+
+
+
+
+#header {
+    height: 75px;
+    background: #FF6633;
+    
+    /*
+	border: 1px solid #eb521f;
+    */
+	margin: 5px;
+	color: #FFE47A;
+    font-size: 2.5em;
+
+            /* rounded corners */
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#808080));
+            background: -moz-linear-gradient(top, #606060, #808080);    
+    
+            /* add box shadows */
+            -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+            -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);    
+	
+	}
+
+#headertext { vertical-align:middle; }
+	
+#slider-wrapper {
+    width: 100%;
+  /*  margin: 5px auto; */
+  /*  border: 1px solid #eb521f; */
+     position:relative;
+	z-index: 0; 
+
+}
+	
+#navigationwrap {
+    width: 900px;
+    float: left;
+    margin: 15px;
+    position:relative;
+    left:100px;
+}
+
+#navigation {
+    height: 40px;
+    background: #FFCC33;
+    border-radius: 10px;
+    border: 1px solid #ebb81f;
+    margin: 5px;
+	
+}
+
+#contentwrap {
+    width: 850px;
+    float: left;
+    margin: 0 auto;
+}
+
+#content {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
+
+#leftcolumn {
+    border: 0px;
+    margin: 0px;
+    width: 140px;
+    float: left;
+    margin: 5px auto;
+	margin-right: 10px;
+	
+	            /* rounded corners */
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#808080));
+            background: -moz-linear-gradient(top, #606060, #808080);    
+    	color: #FFE47A;
+    font-size: 1em;
+}
+
+#footerwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footer {
+    height: 80px;
+  /* border: 1px solid #1feb52; --> */
+    margin: 3px;
+	
+   /* rounded corners */
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#808080));
+            background: -moz-linear-gradient(top, #606060, #808080);    
+    	color: #FFE47A;
+    font-size: 1em;
+	
+	
+}
+
+.hidetable {display: none;}
+.showtable  {display: black;}
+
+/*
+	Slideshow
+*/
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:835px;
+	overflow:hidden;
+/*	position:relative; */
+	display:none;
+	top: 20px; 
+/*	margin: 0 auto; */
+    float : right;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container a {
+	width:835px;
+	height:170px;
+	display:block;
+}
+
+.slides_container a img {
+	display:block;
+	margin: 0 auto;
+	}
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+#wrapper {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#headerwrap {
+    width: 650px;
+    float: left;
+    margin: 0 auto;
+  
+}
+
+#slider-wrapper {
+   display:none;
+}
+
+#leftcolumn {
+   display:none;
+}
+	
+#navigationwrap {
+     clear: both;
+    width: 650px;
+    float: left;
+    margin: 15px;
+    position:relative;
+	 
+ }
+
+ #footerwrap {
+    width: 650px;
+    float: left;
+    margin: 0 auto;
+    clear: both;
+}
+ 
+ #contentwrap {
+    width: 650px;
+    float: left;
+    margin: 0 auto;
+}
+ 
+ #navigationwrap .nav li { width: 50px; float: left; margin: 0 10px 0 0; }
+ 
+}

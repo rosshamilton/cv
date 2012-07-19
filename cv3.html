@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>rosshamiltonOnline.com Profile x</title>
+<link rel="stylesheet" type="text/css" href="css/mainlayout.css" />
+<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="css/table.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<!-- standard jquery code -->
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+
+<!-- menu code -->
+<script src="js/organictabs.jquery.js"></script>
+<!-- slides code -->
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+
+<!-- form code -->
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/contactcode.js"></script>
+
+<script type="text/javascript">
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				generatePagination: false
+			});
+		});
+		
+	$(document).ready(function()
+	{
+	    $("#navigationwrap").organicTabs({"speed": 1});
+        updatepersonaldetailstable('cvid=1','#content div','#personaldetails','showtable');
+	});
+
+
+function updatepersonaldetailstable(params,divname, tablediv, classname)
+{
+
+ 	
+    $.getJSON("php/jsonpersonaldetails.php",params, function(data)
+		{
+		$('#persondetailsbody').html('');
+			$.each(data, function(i,data)
+			{
+            	var row = "<tr><th>Name</th><td>" + data.firstname + " " + data.surname + "</td></tr>";
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+				
+				row = "<tr><th>Date of Birth</th><td>" + data.dob + "</td></tr>";
+			
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+				
+				row = "<tr><th>Marital Status</th><td>" + data.maritalstatus + "</td></tr>";
+			
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+				
+				row = "<tr><th>Driving License</th><td>" + data.drivinglicense + "</td></tr>";
+			
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+				
+				row = "<tr><th>Email Address</th><td>" + data.emailaddress + "</td></tr>";
+				
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+				
+				
+				row = "<tr><th>LinkedIn</th><td>"  + data.emailaddress +"</td></tr>";
+			
+				
+				$("#jsonpersonaldetailstable > tbody").append(row);
+
+			});
+		});
+		   
+	     showtables(divname, tablediv, classname);
+
+		return false;
+}
+
+
+  function showtables(divname, tablediv, classname){
+
+	  $(divname).each(function(index) {
+	 <!--  alert(index + ': ' + $(this).text() + ' id: ' + $(this).attr('id') + ' class: ' + $(this).attr('class')); 
+	   $(this).hide();
+	  });
+	  
+	  $(tablediv).removeAttr("class");
+	  $(tablediv).addClass(classname);   
+	  $(tablediv).show();
+  }
+
+function updatejsonKeyskillstable(params,divname, tablediv, classname)
+{
+
+  
+	$.getJSON("php/jsonkeyskills.php",params, function(data)
+		{
+	
+     	$('#keyskillsbody').html('');
+	 	
+		var row = ""
+		
+			$.each(data, function(i,data)
+			{
+			row = "<tr><td>*</td><td>" + data.statement + "</td></tr>";
+				
+			$("#jsonkeyskillstable > tbody").append(row);
+
+		});			
+		});
+		
+		showtables(divname, tablediv, classname);
+
+		return false;
+}
+
+
+function updateprofiletable(params,divname, tablediv, classname)
+{
+
+  
+	$.getJSON("php/jsonprofile.php",params, function(data)
+		{
+	
+     	$('#profilebody').html('');
+	 	
+		var row = ""
+		
+			$.each(data, function(i,data)
+			{
+			row = "<tr><td>*</td><td>" + data.statement + "</td></tr>";
+				
+			$("#jsonprofiletable > tbody").append(row);
+
+		});			
+		});
+		
+		showtables(divname, tablediv, classname);
+
+		return false;
+}
+
+
+function updatejsonexperiencetable(params,divname, tablediv, classname)
+{
+
+  
+	$.getJSON("php/jsoncompany.php",params, function(data)
+		{
+	
+     	$('#experiencebody').html('');
+	 	
+		var row = ""
+		
+			$.each(data, function(i,data)
+			{
+			row = "<tr><td>*</td><td>" + data.statement + "</td></tr>";
+				
+			$("#jsonexperiencetable > tbody").append(row);
+
+		});			
+		});
+		
+		showtables(divname, tablediv, classname);
+
+		return false;
+}
+
+function contactustable(tablediv)
+{
+	  $('#content div').each(function(index) {
+<!--	  alert(index + ': ' + $(this).text() + ' id: ' + $(this).attr('id') + ' class: ' + $(this).attr('class')); -->
+	   $(this).hide();
+	  });
+
+      $(tablediv).removeAttr("class");
+	  $(tablediv).addClass("showtable"); 
+	  $(tablediv).show();
+	  
+	  <!-- get ride of all the the data -->
+	  
+	  $(tablediv).reset();
+	  <!-- the contactcode slides up the form-->
+	  $(tablediv).slideDown("fast");
+    
+	return false;
+}
+
+
+
+</script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="headerwrap">
+			<div id="header">
+				<center><p id="headertext">rosshamiltonOnline CV</p></center>       
+			</div>
+        </div>
+		<div id="slider-wrapper">
+
+					<div id="slides">
+						<div class="slides_container">
+							<a href="#" title="some expereince" target="_blank"><img src="img/technology.png" width="830" height="150" alt="Slide 1"></a>
+							<a href="#" title="some experience 3" target="_blank"><img src="img/design.png" width="830" height="150" alt="Slide 2"></a>
+							<a href="#" title="some experience 3" target="_blank"><img src="img/implementation.png" width="830" height="150" alt="Slide 2"></a>
+							<a href="#" title="some experience 3" target="_blank"><img src="img/delivery.png" width="830" height="150" alt="Slide 2"></a>
+							<a href="#" title="some experience 3" target="_blank"><img src="img/support.png" width="830" height="150" alt="Slide 2"></a>
+
+							</div>
+					</div> 
+		</div>
+		
+       <div id="navigationwrap">
+		
+			<!-- <div id="navigation"> -->
+				  
+				<ul class="nav">
+					<li class="nav-one"><a onclick="updatepersonaldetailstable('cvid=1','#content div','#personaldetails','showtable')" href="#pd" class="current">Personal Details</a></li>
+					<li class="nav-two"><a onclick="updateprofiletable('cvid=1','#content div','#profile','showtable')" href="#pf">Profile</a></li>
+					<li class="nav-three"><a href="#ks">Key Skills</a></li>
+					<li class="nav-four "><a href="#pe">Experience</a></li>				
+					<li class="nav-five"><a href="#ed">Education</a></li>
+					<li class="nav-contact last "><a onclick="contactustable('#contactwrap')" href="#cf">Contact Me</a></li>
+					
+				</ul>
+		 
+			<!-- </div> -->
+			
+			<div class="list-wrap">
+			        	
+        		<ul id="pd">			
+	
+        		</ul>
+        	 
+        	    <ul id="pf" class="hide">
+
+        		</ul>
+				
+			    <ul id="ks" class="hide">
+        			<li><a onclick="updatejsonKeyskillstable('skilltype=1','#content div','#keyskills','showtable')" href="javascript:void(0);">design</a></li>
+					<li><a onclick="updatejsonKeyskillstable('skilltype=2','#content div','#keyskills','showtable')" href="javascript:void(0);">systems</a></li>
+	                <li><a onclick="updatejsonKeyskillstable('skilltype=3','#content div','#keyskills','showtable')" href="javascript:void(0);">technology</a></li>								
+				</ul>
+				
+				<ul id="pe" class="hide">
+        			<li><a onclick="updatejsonexperiencetable('cvid=1&companyid=*','#content div','#experience','showtable')" href="javascript:void(0);">Summary</a></li>
+        			<li><a onclick="updatejsonexperiencetable('cvid=1&companyid=1','#content div','#experience','showtable')" href="javascript:void(0);">x</a></li>
+					<li><a onclick="updatejsonexperiencetable('cvid=1&companyid=2','#content div','#experience','showtable')" href="javascript:void(0);">y</a></li>
+					<li><a onclick="updatejsonexperiencetable('cvid=1&companyid=3','#content div','#experience','showtable')" href="javascript:void(0);">Aquila</a></li>
+        		</ul>
+
+				<ul id="ed" class="hide">
+        			<li><a href="#">Degree</a></li>
+        			<li><a href="#">A-Levels</a></li>
+					<li><a href="#">GCSE</a></li>
+        		</ul>
+				
+				
+			<ul id="cf">			
+
+        		</ul>
+			</div>
+	    </div>
+        
+		<div id="leftcolumnwrap">
+        <div id="leftcolumn">
+            <p>Technology</p>
+			<p>Design</p>
+			<p>Implementation</p>
+			<p>Delivery</p>
+			<p>Support</p>
+        </div>
+        </div>
+		
+		
+		
+        <div id="contentwrap">
+
+			<div id="content">
+		
+				<div id="keyskills">
+				
+					<table id="jsonkeyskillstable" class="showtable">
+
+
+						<thead>
+						   <tr><th colspan="2">Key Skills</th></tr>
+						</thead>
+
+						<tbody id="keyskillsbody">
+
+						</tbody>
+
+					</table>
+				</div>
+
+				<div id="personaldetails"> 
+				
+					<table id="jsonpersonaldetailstable" class="showtable" style="width :100%">
+					
+					<thead>
+						<tr>
+						  <th colspan="2">Personal Details</th></tr>
+						</thead>
+
+						<tbody id="persondetailsbody">
+
+						</tbody>
+
+					</table>
+
+				</div> 
+
+				<div id="profile"> 
+				
+					<table id="jsonprofiletable" class="showtable">
+					
+					<thead>
+						<tr>
+						  <th colspan="2">Profile Statements</th></tr>
+						</thead>
+
+						<tbody id="profilebody">
+
+						</tbody>
+
+					</table>
+
+				</div> 
+
+				<div id="experience">  
+				
+					<table id="jsonexperiencetable" class="showtable">
+					
+					<thead>
+						<tr>
+						  <th colspan="2">Experience</th></tr>
+						</thead>
+
+						<tbody id="experiencebody">
+
+						</tbody>
+
+					</table>
+
+				</div> 
+				
+			<div id="contactwrap" class="showtable">
+			
+				<form class="showtable" id="contactform" action="php/processForm.php" method="post">
+					<table class="showtable">
+						<tr>
+							<td><label for="name">Name:</label></td>
+							<td><input type="text" id="name" name="name" /></td>
+						</tr>
+						<tr>
+							<td><label for="email">Email:</label></td>
+							<td><input type="text" id="email" name="email" /></td>
+						</tr>
+						<tr>
+							<td><label for="message">Message:</label></td>
+							<td><textarea id="message" name="message" rows="5" cols="90"></textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Send!" id="send" /></td>
+						</tr>
+					</table>
+				</form>
+				<div id="response"></div>
+		    </div>
+				
+			</div>
+        </div>
+		
+        <div id="footerwrap">
+        <div id="footer">
+            		<p>Implementing tomorrows technology today. </br> </br>
+		This site has been implemented in HTML5, CSS3, PHP, MySQL, jQuery, JSON and Javascript all written using Notepad++.
+		Best viewed with a recent browser.
+        </div>
+        </div>
+    </div>
+
+    </body>
+	</html>

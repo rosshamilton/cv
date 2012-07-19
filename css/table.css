@@ -1,0 +1,357 @@
+        table#jsonpersonaldetailstable{
+            width:100%;
+            border-collapse:collapse;
+            text-align:left;
+            color: #606060;
+        }
+        
+        /*** table's thead section, head row style ***/
+        table#jsonpersonaldetailstable thead tr td  {
+            background-color: White;
+            vertical-align:middle;
+            padding: 0.6em;
+            font-size:0.8em;
+            text-align:left;
+			}
+        
+        /*** table's thead section, coulmns header style ***/
+        table#jsonpersonaldetailstable thead tr th
+        {
+            padding: 0.5em;
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+         /***   color: #dadada; ***/
+			color: #FFE47A;
+        }
+        
+        /*** table's tbody section, odd rows style ***/
+        table#jsonpersonaldetailstable tbody tr:nth-child(odd) {
+           background-color: #fafafa;
+        }
+        
+        /*** hover effect to table's tbody odd rows ***/
+		/***
+        table#jsonpersonaldetailstable tbody tr:nth-child(odd):hover
+        {
+            cursor:pointer;
+       
+            
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+		*/
+        
+        /*** table's tbody section, even rows style ***/
+        table#jsonpersonaldetailstable tbody tr:nth-child(even) {
+            background-color: #efefef;
+        }
+
+        /*** hover effect to apply to table's tbody section, even rows ***/
+        /*
+		table#jsonpersonaldetailstable tbody tr:nth-child(even):hover
+        {
+            cursor:pointer;
+            
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }        
+        
+		/*
+       /*** table's tbody section, last row style ***/
+        table#jsonpersonaldetailstable tbody tr:last-child {
+             border-bottom: solid 1px #404040;
+        }
+
+        /*** table's tbody section, separator row pseudo-class ***/
+        table#jsonpersonaldetailstable tbody tr.separator {
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+        
+        /*** table's td element, all section ***/
+        table#jsonpersonaldetailstable td {
+           vertical-align:middle;
+           padding: 0.5em;
+        }
+        
+        /*** table's tfoot section ***/
+        table#jsonpersonaldetailstable tfoot{
+            text-align:center;
+            color:#303030;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+        }     
+
+		
+		table#jsonkeyskillstable {
+            width:100%;
+            border-collapse:collapse;
+            text-align:left;
+            color: #606060;
+        }
+        
+        /*** table's thead section, head row style ***/
+        table#jsonkeyskillstable thead tr td  {
+            background-color: White;
+            vertical-align:middle;
+            padding: 0.6em;
+            font-size:0.8em;
+        }
+        
+        /*** table's thead section, coulmns header style ***/
+        table#jsonkeyskillstable thead tr th
+        {
+            padding: 0.5em;
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+         /***   color: #dadada; ****/
+				color: #FFE47A;
+        }
+        
+        /*** table's tbody section, odd rows style ***/
+        table#jsonkeyskillstable tbody tr:nth-child(odd) {
+           background-color: #fafafa;
+        }
+        
+        /*** hover effect to table's tbody odd rows ***/
+   /*     table#jsonkeyskillstable tbody tr:nth-child(odd):hover
+        {
+            cursor:pointer;
+         
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+    */
+    
+        /*** table's tbody section, even rows style ***/
+        table#jsonkeyskillstable tbody tr:nth-child(even) {
+            background-color: #efefef;
+        }
+
+        /*** hover effect to apply to table's tbody section, even rows ***/
+    /*
+    table#jsonkeyskillstable tbody tr:nth-child(even):hover
+        {
+            cursor:pointer;
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }        
+*/
+        
+       /*** table's tbody section, last row style ***/
+        table#jsonkeyskillstable tbody tr:last-child {
+             border-bottom: solid 1px #404040;
+        }
+
+        /*** table's tbody section, separator row pseudo-class ***/
+        table#jsonkeyskillstable tbody tr.separator {
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+        
+        /*** table's td element, all section ***/
+        table#jsonkeyskillstable td {
+           vertical-align:middle;
+           padding: 0.5em;
+        }
+        
+        /*** table's tfoot section ***/
+        table#jsonkeyskillstable tfoot{
+            text-align:center;
+            color:#303030;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+        }     
+
+        #jsonprofiletable {
+            width:100%;
+            border-collapse:collapse;
+            text-align:left;
+            color: #606060;
+        }
+        
+        /*** table's thead section, head row style ***/
+        table#jsonprofiletable thead tr td  {
+            background-color: White;
+            vertical-align:middle;
+            padding: 0.6em;
+            font-size:0.8em;
+        }
+        
+        /*** table's thead section, coulmns header style ***/
+        table#jsonprofiletable thead tr th
+        {
+            padding: 0.5em;
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+          /***  color: #dadada; ***/
+		  	color: #FFE47A;
+        }
+        
+        /*** table's tbody section, odd rows style ***/
+        table#jsonprofiletable tbody tr:nth-child(odd) {
+           background-color: #fafafa;
+        }
+        
+        /*** hover effect to table's tbody odd rows ***/
+/*     
+	 table#jsonprofiletable tbody tr:nth-child(odd):hover
+        {
+            cursor:pointer;
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+  */
+  
+        /*** table's tbody section, even rows style ***/
+        table#jsonprofiletable tbody tr:nth-child(even) {
+            background-color: #efefef;
+        }
+
+        /*** hover effect to apply to table's tbody section, even rows ***/
+/*
+        table#jsonprofiletable tbody tr:nth-child(even):hover
+        {
+            cursor:pointer;
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }        
+ */       
+       /*** table's tbody section, last row style ***/
+        table#jsonprofiletable tbody tr:last-child {
+             border-bottom: solid 1px #404040;
+        }
+
+        /*** table's tbody section, separator row pseudo-class ***/
+        table#jsonprofiletable tbody tr.separator {
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+        
+        /*** table's td element, all section ***/
+        table#jsonprofiletable td {
+           vertical-align:middle;
+           padding: 0.5em;
+        }
+        
+        /*** table's tfoot section ***/
+        table#jsonprofiletable tfoot{
+            text-align:center;
+            color:#303030;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+        }     
+
+
+		
+		
+		        #jsonexperiencetable {
+            width:100%;
+            border-collapse:collapse;
+            text-align:left;
+            color: #606060;
+        }
+        
+        /*** table's thead section, head row style ***/
+        table#jsonexperiencetable thead tr td  {
+            background-color: White;
+            vertical-align:middle;
+            padding: 0.6em;
+            font-size:0.8em;
+        }
+        
+        /*** table's thead section, coulmns header style ***/
+        table#jsonexperiencetable thead tr th
+        {
+            padding: 0.5em;
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+         /***   color: #dadada; ***/
+		 	color: #FFE47A;
+        }
+        
+        /*** table's tbody section, odd rows style ***/
+        table#jsonexperiencetable tbody tr:nth-child(odd) {
+           background-color: #fafafa;
+        }
+        
+        /*** hover effect to table's tbody odd rows ***/
+/*        table#jsonexperiencetable tbody tr:nth-child(odd):hover
+        {
+            cursor:pointer;
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+        */
+        /*** table's tbody section, even rows style ***/
+        table#jsonexperiencetable tbody tr:nth-child(even) {
+            background-color: #efefef;
+        }
+
+        /*** hover effect to apply to table's tbody section, even rows ***/
+        /*
+		table#jsonexperiencetable tbody tr:nth-child(even):hover
+        {
+            cursor:pointer;
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }        
+        */
+		
+       /*** table's tbody section, last row style ***/
+        table#jsonexperiencetable tbody tr:last-child {
+             border-bottom: solid 1px #404040;
+        }
+
+        /*** table's tbody section, separator row pseudo-class ***/
+        table#jsonexperiencetable tbody tr.separator {
+            /* add gradient */
+            background-color: #808080;
+            background: -webkit-gradient(linear, left top, left bottom, from(#606060), to(#909090));
+            background: -moz-linear-gradient(top, #606060, #909090);
+            color: #dadada;
+        }
+        
+        /*** table's td element, all section ***/
+        table#jsonexperiencetable td {
+           vertical-align:middle;
+           padding: 0.5em;
+        }
+        
+        /*** table's tfoot section ***/
+        table#jsonexperiencetable tfoot{
+            text-align:center;
+            color:#303030;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+        }     
+
+
